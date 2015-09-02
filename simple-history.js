@@ -40,7 +40,7 @@
             parts = query.split('&');
             for (i in parts) {
                 p = parts[i].split('=');
-                obj[p[0]] = p[1] || '';
+                obj[p[0]] = decodeURIComponent(p[1]) || '';
             }
         }
         return obj;
